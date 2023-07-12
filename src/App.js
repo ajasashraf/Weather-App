@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import './App.css'
+function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+        <div className='weather'>
+            <div className='search'>
+                <input type='text' placeholder='Enter City Name' />
+                <button> <img src='/Images/search-icon-free-vector.jpg' alt=''/></button>
+            </div>
+            <div className='winfo'>
+                <img src='/Images/pngtree-3d-clouds-png-image_4561078.png' alt='' className='icon'/>
+                <h1>22°c</h1>
+                <h2>London</h2>
+              <div className='details'>
+                <div className='col'>
+                  <img src='/Images/humidity.jpg' alt=''/>
+                  <div className='humidity'>
+                    <p>20%</p>
+                    <p>Humidity</p>
+                  </div>
+                </div>
+                <div className='col'>
+                <img src='/Images/wind.png' alt=''/>
+                  <div className='wind'>
+                    <p>2 km/h</p>
+                    <p>Wind</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default Home
